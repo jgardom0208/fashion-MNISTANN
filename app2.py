@@ -4,7 +4,7 @@ from PIL import Image
 import numpy as np
 
 # Cargar el modelo
-model = load_model("fashion_mnist.keras")
+model = load_model("fashion_mnistV2.keras")
 
 # Crear la interfaz de usuario
 st.title("Clasificador Fashion MNIST")
@@ -26,4 +26,5 @@ if uploaded_file is not None:
     prediction = model.predict(img_array)
     classes = ["Camiseta/Top", "Pantalón", "Suéter", "Vestido", "Abrigo",
                "Sandalia", "Camisa", "Zapatilla", "Bolso", "Botas"]
+
     st.write("Predicción:", classes[np.argmax(prediction)])
