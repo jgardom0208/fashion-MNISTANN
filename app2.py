@@ -7,7 +7,7 @@ import numpy as np
 model = load_model("fashion_mnistV2.keras")
 
 # Crear la interfaz de usuario
-st.title("Clasificador Fashion MNIST")
+st.title("Clasificador Fashion MNIST V2")
 st.write("Sube una imagen para clasificarla como una categoría de ropa.")
 
 uploaded_file = st.file_uploader("Sube una imagen en escala de grises (28x28)", type=["png", "jpg", "jpeg"])
@@ -28,3 +28,4 @@ if uploaded_file is not None:
                "Sandalia", "Camisa", "Zapatilla", "Bolso", "Botas"]
 
     st.write("Predicción:", classes[np.argmax(prediction)])
+
